@@ -1,5 +1,5 @@
 {
-  "name": "ES-env-polyfills",
+  "name": "es-env-polyfills",
   "version": "1.0.0",
   "description": "Adding polyfills to a Node.js environment",
   "main": "index.js",

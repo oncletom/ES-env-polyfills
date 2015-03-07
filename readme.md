@@ -6,7 +6,7 @@ Adding a bunch of polyfills to your Node.js environments!
 # Install
 
 ````sh
-npm install ES-env-polyfills --save
+npm install es-env-polyfills --save
 ````
 
 
@@ -15,7 +15,7 @@ npm install ES-env-polyfills --save
 Just `require` it before anything else (so dependent packages can benefit from the polyfills)
 
 ````sh
-require('ES-env-polyfills');
+require('es-env-polyfills');
 ````
 
 
