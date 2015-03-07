@@ -37,6 +37,7 @@ It should work fine on 0.12 and [io.js](es6-promise) but in the unlikely case yo
 * String.prototype.includes
 * String.prototype.startsWith
 * String.prototype.endsWith
+* Number.isNaN
 
 These are only the polyfills I've been needing so far in various projects. This repo is happily accepting pull requests if you want to see other polyfills!
 

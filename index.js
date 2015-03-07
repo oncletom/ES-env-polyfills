@@ -14,7 +14,7 @@ if (typeof Promise === 'undefined')
     global.Promise = require('es6-promise').Promise;
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill
-if (!Object.assign) {
+if (typeof Object.assign !== "function") {
     Object.defineProperty(Object, "assign", {
         enumerable: false,
         configurable: true,
@@ -40,7 +40,7 @@ if (!Object.assign) {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Polyfill
-if (!Array.prototype.find) {
+if (typeof Array.prototype.find !== "function") {
     Array.prototype.find = function (predicate) {
         if (this == null) {
             throw new TypeError('Array.prototype.find called on null or undefined');
@@ -65,7 +65,7 @@ if (!Array.prototype.find) {
 
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex#Polyfill
-if (!Array.prototype.findIndex) {
+if (typeof Array.prototype.findIndex !== "function") {
     Array.prototype.findIndex = function (predicate) {
         if (this == null) {
             throw new TypeError('Array.prototype.find called on null or undefined');
@@ -89,7 +89,7 @@ if (!Array.prototype.findIndex) {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#Polyfill
-if (!Array.from) {
+if (typeof Array.from !== "function") {
     Array.from = (function () {
         var toStr = Object.prototype.toString;
         var isCallable = function (fn) {
@@ -172,14 +172,15 @@ if (!Array.from) {
 
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes#Polyfill
-if (!String.prototype.includes) {
+if (typeof String.prototype.includes !== "function") {
     String.prototype.includes = function () {
         'use strict';
         return String.prototype.indexOf.apply(this, arguments) !== -1;
     };
 }
 
-if (!String.prototype.startsWith) {
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith#Polyfill
+if (typeof String.prototype.startsWith !== "function") {
     Object.defineProperty(String.prototype, 'startsWith', {
         enumerable: false,
         configurable: false,
@@ -191,7 +192,8 @@ if (!String.prototype.startsWith) {
     });
 }
 
-if (!String.prototype.endsWith) {
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith#Polyfill
+if (typeof String.prototype.endsWith !== "function") {
     Object.defineProperty(String.prototype, 'endsWith', {
         value: function (searchString, position) {
             var subjectString = this.toString();
@@ -204,3 +206,11 @@ if (!String.prototype.endsWith) {
         }
     });
 }
+
+
+if(typeof Number.isNaN !== "function"){    
+    Number.isNaN = function isNaN(x){
+        return typeof x === "number" && x !== x;
+    };
+}
+
