@@ -21,7 +21,8 @@ require('ES-env-polyfills');
 
 # Potential limitations
 
-For now, this has only been tested and used on Node.js™ 0.10
+For now, this has only been tested and used on Node.js™ 0.10.
+It should work fine on 0.12 and [io.js](es6-promise) but in the unlikely case you run into problems, please file an [issue](https://github.com/DavidBruant/ES-env-polyfills/issues/new)
 
 
 # Polyfills list
