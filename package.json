@@ -1,0 +1,31 @@
+{
+  "name": "ES-env-polyfills",
+  "version": "1.0.0",
+  "description": "Adding polyfills to a Node.js environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidBruant/ES-env-polyfills.git"
+  },
+  "keywords": [
+    "polyfill",
+    "ES6",
+    "ES7",
+    "harmony"
+  ],
+  "author": "David Bruant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidBruant/ES-env-polyfills/issues"
+  },
+  "homepage": "https://github.com/DavidBruant/ES-env-polyfills",
+  "dependencies": {
+    "es6-map": "^0.1.1",
+    "es6-promise": "^2.0.1",
+    "es6-set": "^0.1.1",
+    "es6-weak-map": "^0.1.2"
+  }
+}
