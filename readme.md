@@ -1,4 +1,4 @@
-# ES-env-polyfills
+# ES-env-polyfills [![Build Status](https://travis-ci.org/DavidBruant/ES-env-polyfills.svg)](https://travis-ci.org/DavidBruant/ES-env-polyfills)
 
 Adding a bunch of polyfills to your Node.js environments!
 
